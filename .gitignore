@@ -1,0 +1,7 @@
+
+
+#   # Ignorar la carpeta build generada por Babel
+dist/
+
+# Ignorar la carpeta node_modules
+node_modules/

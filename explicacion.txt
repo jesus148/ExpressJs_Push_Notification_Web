@@ -1,0 +1,52 @@
+
+
+https://www.youtube.com/watch?v=B3O__1IiVIY&t=530s ---- 22:32 22:32
+
+Push notifications
+Las push notifications (notificaciones push) son mensajes emergentes en los que se puede hacer clic y que una aplicación envía a tu dispositivo móvil u ordenador. Están diseñados para captar la atención del usuario y transmitir mensajes importantes, incluso cuando la aplicación no está abierta.
+
+Las notificaciones push, también conocidas como server push notifications, son mensajes cortos enviados desde aplicaciones a dispositivos móviles. Son similares a los mensajes SMS o las alertas móviles y aparecen como una pantalla completa o como un banner superior o inferior, según la función o el objetivo de la notificación.
+
+Las push notifications se introdujeron para dispositivos iOS y Android en 2009 y desde entonces han ganado una gran popularidad. Son una forma rápida de compartir información vital u ofertas por tiempo limitado con los usuarios. Además, puedes enviarlos en cualquier momento, ya que el usuario no necesita estar usando activamente su teléfono o aplicación.
+
+
+https://www.youtube.com/watch?v=B3O__1IiVIY&t=472s 9:40 
+
+1.  iniciando el proyecto
+ 
+PS C:\Users\jesus\Desktop\JESUS\EXPRESS_PROYECTOS\push_notificacion> npm init -y 
+
+
+2. instalando dependencias
+express : aplicacion express 
+dotenv : variables de entorno
+morgan : info del rest
+web-push : push notifications
+
+PS C:\Users\jesus\Desktop\JESUS\EXPRESS_PROYECTOS\push_notificacion> npm install express web-push dotenv morgan
+
+
+
+3. 
+
+documentacion 
+https://www.npmjs.com/package/web-push
+ en la parte de Command Line > estan los camandos de inicio
+
+ en la terminal >
+PS C:\Users\jesus\Desktop\JESUS\EXPRESS_PROYECTOS\push_notificacion> npx web-push generate-vapid-keys 
+esto genera una llave publica y privada
+
+
+un ejemplo nos sale esto
+=======================================
+
+Public Key:
+BLFPtw654kgLYUDae8juttMNrO9F9-gN-kb81go68DZRwvDbuf0wZien9_J8dv1TI-xPkKix185c1W8ZQU2kmeE
+
+Private Key:
+fpWSnfMdWZ7He_jsL1V8aOs3BtL1X5fPLzDPq1RWPVs
+
+=======================================
+
+en tu .env(variables de entorno guardalas respectivamente )
