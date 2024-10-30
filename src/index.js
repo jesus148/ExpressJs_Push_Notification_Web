@@ -31,10 +31,10 @@ app.use(require('./routes/index'))
 // __dirname : src\ ==> es la ruta general donde esta el index.js y lo concatena con el public
 // en si el _dirname sale esto C:\Users\jesus\Desktop\JESUS\EXPRESS_PROYECTOS\push_notificacion\src
 // src\public : osea todo esta sera publica para el cliente
-// http://localhost:3000/ : saldra los files esticos por default
+// http://localhost:3000/ : saldra los files esticos por default al iniciar la app(x reglas del static sale el index.html)
 app.use(express.static(path.join(__dirname , 'public')))
 
 
 
 app.listen(3000);
-console.log('server listennig');
+console.log('server listennig ' + 3000);

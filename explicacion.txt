@@ -1,6 +1,6 @@
 
 
-https://www.youtube.com/watch?v=B3O__1IiVIY&t=530s ---- 22:32 22:32
+https://www.youtube.com/watch?v=B3O__1IiVIY&t=530s ---- 32:11 
 
 Push notifications
 Las push notifications (notificaciones push) son mensajes emergentes en los que se puede hacer clic y que una aplicación envía a tu dispositivo móvil u ordenador. Están diseñados para captar la atención del usuario y transmitir mensajes importantes, incluso cuando la aplicación no está abierta.
@@ -50,3 +50,17 @@ fpWSnfMdWZ7He_jsL1V8aOs3BtL1X5fPLzDPq1RWPVs
 =======================================
 
 en tu .env(variables de entorno guardalas respectivamente )
+
+
+
+
+4. comando ejecutar proyecto 
+
+PS C:\Users\jesus\Desktop\JESUS\EXPRESS_PROYECTOS\push_notificacion> node .\src\index.js
+
+
+
+5. explicacion de la estructura 
+ 
+ > src\public : es como si fuera el front
+ > src : fuera del public es como si fuera el back
