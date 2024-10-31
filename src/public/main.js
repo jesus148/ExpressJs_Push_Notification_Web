@@ -1,11 +1,29 @@
 
 // file principal
 
-const { urlencoded, json } = require("express");
+// const { urlencoded, json } = require("express");
 
 
 // llave publica copiar = que el .env 
-const PUBLIC_VAPID_KEY='BLFPtw654kgLYUDae8juttMNrO9F9-gN-kb81go68DZRwvDbuf0wZien9_J8dv1TI-xPkKix185c1W8ZQU2kmeE';
+const PUBLIC_VAPID_KEY='BKo5DErfqkhGTsyynE_juiGDurJnetCMY892IZebgM0AyFCpt_1o6F4wxXearnWcB29IEXOcTEndLP52boARTvk';
+
+
+
+function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+    const base64 = (base64String + padding)
+      .replace(/\-/g, '+')
+      .replace(/_/g, '/');
+  
+    // const rawData = window.atob(base64);
+    const rawData = Buffer.from(base64, 'base64'); 
+    const outputArray = new Uint8Array(rawData.length);
+  
+    for (let i = 0; i < rawData.length; ++i) {
+      outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+  }
 
 
 // <!-- esto es como si fuera el front -->

@@ -13,8 +13,9 @@ const webpush = require('../webpush')
 // metodo post
 // la primera suscripcion del usuario
 router.post('/suscription',(req , res)=>{
-    console.log(req.body);
-    res.status(200).json();
+    const subscription = req.body;
+    console.log('Received subscription:', subscription);
+    res.status(201).json({});
 })
 
 
