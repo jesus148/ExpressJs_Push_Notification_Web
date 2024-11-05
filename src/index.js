@@ -22,6 +22,7 @@ app.use(express.urlencoded({extended:false}))
 // compartir data bidireccional desde el front al back
 app.use(express.json());
 
+
 // routes
 app.use(require('./routes/index'))
 
