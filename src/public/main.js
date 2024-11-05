@@ -32,7 +32,8 @@ const suscription = async ()=>{
 
 // ===================================================
       // Service Worker
-    // registrar o suscribir un proceso
+    // registrar o suscribir un procesoq
+
     // Un Service Worker es un tipo de script que permite interceptar y controlar las solicitudes de red y otros eventos en una aplicación web, lo cual puede mejorar el rendimiento y permitir funcionalidades sin conexión (offline). Vamos a desglosarlo:
     // basicamentes es como un interceptor de peticiones al igual que angular 
     // serviceWorker.register : llama al metodo register
@@ -45,20 +46,24 @@ const suscription = async ()=>{
     // console.log('new service worker');
 
     // verificando si el navegador soporta service worker 
+    // register 
+
+    let register;
+    
     if ('serviceWorker' in navigator) {
-      const register =await navigator.serviceWorker.register('/worker.js', {
+       register =await navigator.serviceWorker.register('/worker.js', {
           scope: '/'
           // todo ok
-      }).then(register => {
+      })/* .then(register => {
           console.log('Service Worker registered', register);
         // si hay errores
         }).catch(error => {
           console.error('Service Worker registration failed:', error);
-      });
+      }); */
   } else {
       console.log('Service Workers not supported in this browser.');
   }
-  console.log('Service Worker registered', register);
+  // console.log('Service Worker registered', register);
   // viendo en el devtools  > f12 > aplication > service workers >lado derecho >source aparecer la ubicacion de tu service worker
   // los service worker solo aparecen una vez , a menos q modifiques 
 // ========================================
