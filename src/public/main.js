@@ -9,6 +9,7 @@ const PUBLIC_VAPID_KEY=urlBase64ToUint8Array('BGtxOu3CWcBMWuCRzHnRGiTZxkDGIb7M8z
 
 
 
+// convieritendo el push en uint8Arrar en base 64
 // clean up data so it's easier to send. 
 function urlBase64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
@@ -45,11 +46,11 @@ const suscription = async ()=>{
     // })
     // console.log('new service worker');
 
-    // verificando si el navegador soporta service worker 
-    // register 
-
+      
     let register;
     
+    // verificando si el navegador soporta service worker 
+    // register 
     if ('serviceWorker' in navigator) {
        register =await navigator.serviceWorker.register('/worker.js', {
           scope: '/'
@@ -91,6 +92,7 @@ const suscription = async ()=>{
      const suscription=await register.pushManager.subscribe({
         userVisibleOnly:true,
         // PUBLIC_VAPID_KEY lo convierte a base64 pq no acepta string
+        // saldra en tu browser > permitir notificaciones
         applicationServerKey: PUBLIC_VAPID_KEY
     });
 
@@ -114,3 +116,17 @@ const suscription = async ()=>{
 
 // ejecuta funcion 
  suscription();
+
+
+
+
+
+//  body:JSON.stringify(suscription) : es el objeto q se envia al back > routes > index.js
+//  Received subscription: {
+//   endpoint: 'https://fcm.googleapis.com/fcm/send/esW3qKPceG4:APA91bHuLxF_qbxirSO5Dm6BnCms1m02CQ2l4Eu69MbQUzuez8leeFp-l31pE97tr5P9CKXZaKtpYGWejpZWsVYCNdORevGcKJzt9RV8qWCYvvCneJG97MMMYwB_34z-bSG8_66HP43F',
+//   expirationTime: null,
+//   keys: {
+//     p256dh: 'BLtPpexDvLCv18v8gS1XB5Px2u0lzEdnfXw1g0tMDFTstStb4DGTiFa3UwSquLJTGWACBZMoLv733GyeN8lYccY',
+//     auth: 'tyYsnnqiXJMM_mWLb7KbmA'
+//   }
+// }
