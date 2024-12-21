@@ -114,6 +114,42 @@ const suscription = async ()=>{
 }
 
 
+
+
+
+
+// ESTE ENVIARA LAS NOTIFICACIONES 
+// osea enviaremos al back lo escrito por los form
+// obteniendo data de los form cliente 
+// y el back nos devuelve la data como notificacion usamos el Worker.js para ver la notificacion
+const form = document.querySelector('#myform');
+const message = document.querySelector('#message');
+
+// cuando se ejecuta el formulario
+form.addEventListener('submit',e =>{
+  
+  // cancela el reseteo osea luego de enviar el form 
+  // el reseteo del form se cancela
+  e.preventDefault();
+
+  // /new-message' 
+  // src\routes\index.js
+  fetch('/new-message',{
+    method:'POST',   
+    body:JSON.stringify({
+      // envia el valor del input de arriba
+      message:message.value
+    }),
+    headers:{
+      'Content-type':'application/json'
+    }
+  })
+
+  // luego de enviar la peticion resetea los valores
+  form.reset();
+})
+
+
 // ejecuta funcion 
  suscription();
 

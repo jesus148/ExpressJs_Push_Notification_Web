@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const express = require('express');
 const morgan = require('morgan');
-const path= require('path')
+const path= require('path');
 
 const app = express();
 
@@ -18,7 +18,7 @@ const app = express();
 // info del rest
 app.use(morgan('dev'));
 // data q viene de los forms en el front para poder usarlos 
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false}));
 // compartir data bidireccional desde el front al back
 app.use(express.json());
 

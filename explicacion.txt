@@ -8,7 +8,8 @@ z
 Las notificaciones push, también conocidas como server push notifications, son mensajes cortos enviados desde aplicaciones a dispositivos móviles. Son similares a los mensajes SMS o las alertas móviles y aparecen como una pantalla completa o como un banner superior o inferior, según la función o el objetivo de la notificación.
 
 Las push notifications se introdujeron para dispositivos iOS y Android en 2009 y desde entonces han ganado una gran popularidad. Son una forma rápida de compartir información vital u ofertas por tiempo limitado con los usuarios. Además, puedes enviarlos en cualquier momento, ya que el usuario no necesita estar usando activamente su teléfono o aplicación.
-
+ 
+ojo recordar : cuando se hace un push basicamente es para  cuando un usuario modifica la bd  o el backend , y esto avisas a los demas usuarios.
 
 https://www.youtube.com/watch?v=B3O__1IiVIY&t=472s 9:40 
 
@@ -64,3 +65,13 @@ PS C:\Users\jesus\Desktop\JESUS\EXPRESS_PROYECTOS\push_notificacion> node .\src\
  
  > src\public : es como si fuera el front
  > src : fuera del public es como si fuera el back
+
+
+
+ 7. 
+   otras herramientas para las notiicaciones
+    > https://developer.android.com/?hl=es-419
+
+
+8. 
+ si esta ejecutando o cambiando el codigo volve a ejecutar    
